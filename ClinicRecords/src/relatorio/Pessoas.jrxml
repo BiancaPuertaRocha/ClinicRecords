@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report name" pageWidth="1000" pageHeight="842" columnWidth="960" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="0e9426e4-e0e8-4abe-a685-17fc50f5315d">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="rg" class="java.lang.String">
+		<fieldDescription><![CDATA[rg]]></fieldDescription>
+	</field>
+	<field name="profissao" class="java.lang.String">
+		<fieldDescription><![CDATA[profissao]]></fieldDescription>
+	</field>
+	<field name="endereco" class="java.lang.String">
+		<fieldDescription><![CDATA[endereco]]></fieldDescription>
+	</field>
+	<field name="class" class="java.lang.Class">
+		<fieldDescription><![CDATA[class]]></fieldDescription>
+	</field>
+	<field name="datacad" class="java.util.Date">
+		<fieldDescription><![CDATA[datacad]]></fieldDescription>
+	</field>
+	<field name="codigo" class="java.lang.Integer">
+		<fieldDescription><![CDATA[codigo]]></fieldDescription>
+	</field>
+	<field name="datanasc" class="java.util.Date">
+		<fieldDescription><![CDATA[datanasc]]></fieldDescription>
+	</field>
+	<field name="cpf" class="java.lang.String">
+		<fieldDescription><![CDATA[cpf]]></fieldDescription>
+	</field>
+	<field name="bairro" class="java.lang.String">
+		<fieldDescription><![CDATA[bairro]]></fieldDescription>
+	</field>
+	<field name="cartsus" class="java.lang.String">
+		<fieldDescription><![CDATA[cartsus]]></fieldDescription>
+	</field>
+	<field name="estcivil" class="java.lang.String">
+		<fieldDescription><![CDATA[estcivil]]></fieldDescription>
+	</field>
+	<field name="email" class="java.lang.String">
+		<fieldDescription><![CDATA[email]]></fieldDescription>
+	</field>
+	<field name="nome" class="java.lang.String">
+		<fieldDescription><![CDATA[nome]]></fieldDescription>
+	</field>
+	<field name="cidade" class="java.lang.String">
+		<fieldDescription><![CDATA[cidade]]></fieldDescription>
+	</field>
+	<field name="telefone" class="java.lang.String">
+		<fieldDescription><![CDATA[telefone]]></fieldDescription>
+	</field>
+	<field name="tiposang" class="java.lang.String">
+		<fieldDescription><![CDATA[tiposang]]></fieldDescription>
+	</field>
+	<field name="uf" class="java.lang.String">
+		<fieldDescription><![CDATA[uf]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="73" splitType="Stretch">
+			<rectangle>
+				<reportElement x="0" y="0" width="960" height="67" uuid="27081bd8-aa0c-43fa-9f3f-95819afaa493"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="0" y="0" width="317" height="27" uuid="992087cf-282f-44f7-bc47-25a1fb0608bb"/>
+				<textElement>
+					<font fontName="Courier New" size="20" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Relatório de Pessoas]]></text>
+			</staticText>
+			<image>
+				<reportElement x="820" y="-10" width="140" height="83" uuid="2f671dcb-d824-4b2e-b162-28ce62519e8f"/>
+				<imageExpression><![CDATA["C:\\Users\\Bianca\\Desktop\\CinicRecords\\ClinicRecords\\src\\Imagens\\logomenor - Cópia.jpg"]]></imageExpression>
+			</image>
+			<textField pattern="EEE, d MMM yyyy HH:mm:ss Z">
+				<reportElement x="5" y="27" width="218" height="20" uuid="c5f44777-a8e1-4414-9f75-233e96463cd6"/>
+				<textElement>
+					<font fontName="Courier New" size="13" isItalic="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<columnHeader>
+		<band height="36" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="11" width="123" height="20" uuid="1e2b250e-1272-4009-ab8b-70aab339beaa"/>
+				<textElement>
+					<font fontName="Courier New" size="15" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Nome]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="123" y="11" width="100" height="20" uuid="0466b459-0bb3-4f90-86ec-20d585582892"/>
+				<textElement>
+					<font fontName="Courier New" size="15" isBold="true"/>
+				</textElement>
+				<text><![CDATA[CPF]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="223" y="11" width="100" height="20" uuid="711791af-2637-48fe-996c-4636c82d2fdf"/>
+				<textElement>
+					<font fontName="Courier New" size="15" isBold="true"/>
+				</textElement>
+				<text><![CDATA[RG]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="323" y="11" width="100" height="20" uuid="1678459e-4a2e-41c0-938e-cc6f3d0074bf"/>
+				<textElement>
+					<font fontName="Courier New" size="15" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Cartão SUS]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="423" y="11" width="250" height="20" uuid="319cd4d0-1890-4868-bc91-45454686a803"/>
+				<textElement>
+					<font fontName="Courier New" size="15" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Endereço]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="673" y="11" width="175" height="20" uuid="46a7e4ad-960c-488c-b225-e5ceec339e30"/>
+				<textElement>
+					<font fontName="Courier New" size="15" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Contato]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="860" y="11" width="100" height="20" uuid="121d0c41-441f-4801-b2c0-2d77e31ef780"/>
+				<textElement>
+					<font fontName="Courier New" size="15" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Cadastro]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="30" width="960" height="1" uuid="d3cb63e5-2db2-4465-a71f-01cea95bb91c"/>
+			</line>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="61" splitType="Stretch">
+			<textField>
+				<reportElement x="423" y="0" width="250" height="61" uuid="2cc80e70-94a6-442b-bb81-ab35ff635b16"/>
+				<textElement>
+					<font fontName="Courier New" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{endereco}+ ", " + $F{bairro}+", "+$F{cidade}+","+$F{uf}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="673" y="0" width="175" height="61" uuid="ebbc31c1-a5cf-49fe-b85c-ce41be7b5bcc"/>
+				<textElement>
+					<font fontName="Courier New" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Contato: "+$F{telefone}+", "+$F{email}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="223" y="0" width="100" height="61" uuid="8bce84b5-fb49-4bdd-9387-8d4a0904dd2a"/>
+				<textElement>
+					<font fontName="Courier New" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{rg}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="323" y="0" width="100" height="61" uuid="ada845ae-1a8f-4a3b-8727-44e9cdca7f49"/>
+				<textElement>
+					<font fontName="Courier New" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{cartsus}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="123" y="0" width="100" height="61" uuid="6b494864-865f-4b27-97db-a78cce07c45c"/>
+				<textElement>
+					<font fontName="Courier New" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{cpf}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="0" width="123" height="61" uuid="36a988dd-9396-41a0-881e-2553d3bf16a8"/>
+				<textElement>
+					<font fontName="Courier New" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{nome}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="860" y="0" width="86" height="23" uuid="7d505213-d601-458c-ab52-dc1cadc8ecc1"/>
+				<textElement>
+					<font fontName="Courier New" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{datacad}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="32" splitType="Stretch">
+			<textField>
+				<reportElement x="860" y="12" width="100" height="20" uuid="b84100c9-33f2-4306-9d69-29ade4aaca4e"/>
+				<textFieldExpression><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="0" y="0" width="960" height="1" uuid="b00cf72c-1873-4c95-8aa9-01c940d2c5fe"/>
+			</line>
+		</band>
+	</pageFooter>
+</jasperReport>

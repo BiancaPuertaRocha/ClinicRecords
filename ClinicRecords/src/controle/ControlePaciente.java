@@ -47,7 +47,19 @@ public class ControlePaciente extends Controle{
         em.close();
         return paciente;
     }
-     public List<Pessoa> buscarNome(String nome){
+    public List<Pessoa> pesquisaPacienteCPF(String pesquisa) {
+        List<Pessoa> paciente;
+        TypedQuery<Pessoa> consulta;
+        String parSQL;
+        EntityManager em = getEntityManger();
+        parSQL = pesquisa;
+        consulta = em.createNamedQuery("PessoaCPF",Pessoa.class);
+        consulta.setParameter("busca", parSQL);
+        paciente = consulta.getResultList();
+        em.close();
+        return paciente;
+    }
+     /*public List<Pessoa> buscarNome(String nome){
             EntityManager em = getEntityManger();
             TypedQuery<Pessoa> consulta;
            
@@ -56,5 +68,5 @@ public class ControlePaciente extends Controle{
             consulta.setParameter("nome", "%"+nome+"%");
             
             return consulta.getResultList();
-        }
+        }*/
 }

@@ -1,20 +1,17 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package modelo;
 import java.io.Serializable;
-import java.util.Date;
+import java.util.Collection;
+import javax.persistence.Basic;
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
-import javax.persistence.Temporal;
-import javax.persistence.TemporalType;
+
 
 @Entity
 @Table(name="tipoatend")
@@ -26,6 +23,8 @@ import javax.persistence.TemporalType;
                  
         })
 public class TipoAtendi  implements Serializable {
+
+    
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int codigo;
@@ -57,6 +56,11 @@ public class TipoAtendi  implements Serializable {
         return true;
     }
 
+    @Override
+    public String toString() {
+        return descricao ;
+    }
+
     public String getDescricao() {
         return descricao;
     }
@@ -81,5 +85,25 @@ public class TipoAtendi  implements Serializable {
     public void setCodigo(int codigo) {
         this.codigo = codigo;
     }
+
+    public TipoAtendi() {
+    }
+
+    public TipoAtendi(Integer codigo) {
+        this.codigo = codigo;
+    }
+
+   
+    public void setCodigo(Integer codigo) {
+        this.codigo = codigo;
+    }
+
+   
+
+   
+
+   
+
+   
     
 }

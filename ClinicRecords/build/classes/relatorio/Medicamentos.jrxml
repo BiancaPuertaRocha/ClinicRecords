@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report name" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="d13c7feb-8671-4a2f-b575-5433a75f4230">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="codigo" class="java.lang.Integer">
+		<fieldDescription><![CDATA[codigo]]></fieldDescription>
+	</field>
+	<field name="concentracao" class="java.lang.Double">
+		<fieldDescription><![CDATA[concentracao]]></fieldDescription>
+	</field>
+	<field name="descricao" class="java.lang.String">
+		<fieldDescription><![CDATA[descricao]]></fieldDescription>
+	</field>
+	<field name="unidade" class="java.lang.String">
+		<fieldDescription><![CDATA[unidade]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<rectangle>
+				<reportElement x="0" y="0" width="555" height="67" uuid="b59a75d1-bd97-414b-976d-bde244780512"/>
+			</rectangle>
+			<textField pattern="EEE, d MMM yyyy HH:mm:ss Z">
+				<reportElement x="0" y="27" width="177" height="20" uuid="0ca61a27-b120-4187-97fe-d7638bf8c56f"/>
+				<textElement>
+					<font fontName="Courier New" size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="0" width="317" height="27" uuid="b0282097-02f5-47da-878c-8939f32503ad"/>
+				<textElement>
+					<font fontName="Courier New" size="20" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Relatório de Medicamentos]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch">
+			<textField pattern="EEE, d MMM yyyy HH:mm:ss Z">
+				<reportElement x="310" y="15" width="245" height="20" uuid="c838e0cc-8280-4a3e-993b-31f7bbad4021"/>
+				<textElement>
+					<font fontName="Courier New" size="13" isItalic="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="15" width="265" height="20" uuid="12e06373-fe08-4797-bbec-4939ac9dd539"/>
+				<textElement>
+					<font fontName="Courier New" size="14"/>
+				</textElement>
+				<text><![CDATA[Relatório de Medicamentos]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="27" splitType="Stretch">
+			<line>
+				<reportElement x="0" y="0" width="555" height="1" uuid="fb6fa338-a622-47a1-b342-c3baa9838cd6"/>
+			</line>
+			<staticText>
+				<reportElement x="0" y="1" width="100" height="20" uuid="9ae03047-b258-4c69-922e-eee1e4c5d2f5"/>
+				<textElement>
+					<font fontName="Courier New" size="15" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Codigo]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="100" y="2" width="241" height="20" uuid="9a4b64e8-f16a-4bf9-9840-679e5137ba7d"/>
+				<textElement>
+					<font fontName="Courier New" size="15" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Descrição]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="341" y="2" width="114" height="20" uuid="0b296e34-65e5-45a6-8045-e01fa7f95711"/>
+				<textElement>
+					<font fontName="Courier New" size="15" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Concentração]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="455" y="1" width="100" height="20" uuid="7a498ef0-6016-447e-a2bf-98a6278c072f"/>
+				<textElement>
+					<font fontName="Courier New" size="15" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Unidade]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="138" splitType="Stretch">
+			<line>
+				<reportElement x="0" y="0" width="555" height="1" uuid="50b5dcd1-ade0-4582-9d1a-dc3ff9d73bc8"/>
+			</line>
+			<textField>
+				<reportElement x="0" y="1" width="100" height="20" uuid="405abb23-b24c-4c70-a646-2833689e745e"/>
+				<textElement>
+					<font fontName="Courier New" size="13"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{codigo}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="100" y="0" width="241" height="20" uuid="23fd9fb1-9ebb-43ba-8c13-5f31df6d1536"/>
+				<textElement>
+					<font fontName="Courier New" size="13"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{descricao}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="341" y="1" width="114" height="20" uuid="b9350b80-6010-45d7-9e97-868732034993"/>
+				<textElement>
+					<font fontName="Courier New" size="13"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{concentracao}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="455" y="1" width="100" height="20" uuid="91c91061-d652-4700-8406-d4e38127c282"/>
+				<textElement>
+					<font fontName="Courier New" size="13"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{unidade}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="32" splitType="Stretch">
+			<textField>
+				<reportElement x="455" y="12" width="100" height="20" uuid="b0b01cce-dbb0-4659-b46c-dce2030f24c2"/>
+				<textFieldExpression><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="0" y="0" width="555" height="1" uuid="d698cdb7-c8db-47cb-bfbb-bf235785d49a"/>
+			</line>
+		</band>
+	</pageFooter>
+</jasperReport>

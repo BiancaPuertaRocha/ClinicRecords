@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report name" pageWidth="700" pageHeight="842" columnWidth="660" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="4e883f9f-ff68-40b3-be2b-b827020c6f12">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="nome" class="java.lang.String">
+		<fieldDescription><![CDATA[preconsulta.fichaatend.paciente.nome]]></fieldDescription>
+	</field>
+	<field name="nome_1" class="java.lang.String">
+		<fieldDescription><![CDATA[preconsulta.medico.nome]]></fieldDescription>
+	</field>
+	<field name="numeroordem" class="java.lang.Integer">
+		<fieldDescription><![CDATA[preconsulta.numeroordem]]></fieldDescription>
+	</field>
+	<field name="dataConsul" class="java.util.Date">
+		<fieldDescription><![CDATA[dataConsul]]></fieldDescription>
+	</field>
+	<field name="diagnostico" class="java.lang.String">
+		<fieldDescription><![CDATA[diagnostico]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<textField pattern="EEE, d MMM yyyy HH:mm:ss Z">
+				<reportElement x="0" y="27" width="317" height="20" uuid="6238f9ed-770c-444d-a75d-f56e002171ac"/>
+				<textElement>
+					<font fontName="Courier New" size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<rectangle>
+				<reportElement x="0" y="0" width="660" height="79" uuid="6cd28ba5-a65a-40ea-b661-6e12272d9e09"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="0" y="0" width="317" height="27" uuid="1cd193c9-e1e1-4789-8f8a-0168eded4f8e"/>
+				<textElement>
+					<font fontName="Courier New" size="20" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Relatório de Consultas]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="47" width="555" height="20" uuid="efa590d4-44c7-4e1c-be3c-2299debd71e1"/>
+				<textElement>
+					<font fontName="Courier New" size="14"/>
+				</textElement>
+				<text><![CDATA["Médico:"+$F{nome}]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="27" splitType="Stretch">
+			<staticText>
+				<reportElement x="217" y="0" width="100" height="20" uuid="0194c1bc-6461-4d1a-b725-2f49a6f6faab"/>
+				<textElement>
+					<font fontName="Courier New" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Ordem da Pre]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="0" width="218" height="20" uuid="f77e9d9a-27a7-4864-8a14-48c7b4c7250f"/>
+				<textElement>
+					<font fontName="Courier New" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Paciente]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="318" y="0" width="100" height="20" uuid="5ecc2d0a-f09f-405d-8a29-d167cc982495"/>
+				<textElement>
+					<font fontName="Courier New" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Data]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="417" y="0" width="243" height="20" uuid="2f3392a3-7f98-41f4-a970-66f275da5453"/>
+				<textElement>
+					<font fontName="Courier New" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Diagnóstico]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="19" width="660" height="1" uuid="529e9bcf-1ac8-470b-a96d-4b3b43c89989"/>
+			</line>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="125" splitType="Stretch">
+			<textField>
+				<reportElement x="417" y="0" width="243" height="61" uuid="ea3b5fba-a296-49db-bbaa-f96ac66a7f47"/>
+				<textElement>
+					<font fontName="Courier New" size="13"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{diagnostico}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="0" width="218" height="61" uuid="6069346a-669b-4fe9-884d-2d6b6e22470e"/>
+				<textElement>
+					<font fontName="Courier New" size="13"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{nome_1}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="218" y="0" width="100" height="20" uuid="41f3d313-ca9e-483f-90b7-101f778c3a53"/>
+				<textElement>
+					<font fontName="Courier New" size="13"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{numeroordem}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="317" y="0" width="100" height="20" uuid="3d83a66a-a6fe-4006-8138-4eb5939225c6"/>
+				<textElement>
+					<font fontName="Courier New" size="13"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{dataConsul}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="35" splitType="Stretch">
+			<textField>
+				<reportElement x="560" y="15" width="100" height="20" uuid="2a6906e5-898c-480b-9fce-aca4ba87b2a3"/>
+				<textFieldExpression><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="0" y="0" width="660" height="1" uuid="a896f8a6-8167-4244-913b-a0217445f279"/>
+			</line>
+		</band>
+	</pageFooter>
+</jasperReport>

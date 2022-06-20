@@ -1,6 +1,4 @@
 package modelo;
-
-
 import java.io.Serializable;
 import java.util.Date;
 import javax.persistence.Column;
@@ -16,16 +14,19 @@ import javax.persistence.InheritanceType;
 import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
 import javax.persistence.Table;
-
 import javax.persistence.Temporal;
 @Entity
 @Inheritance(strategy=InheritanceType.JOINED)
 @DiscriminatorColumn(name="TYPE",discriminatorType = DiscriminatorType.STRING,length = 20)
 @DiscriminatorValue("PESSOA")
 @Table(name="pessoa")
-@NamedQueries ({@NamedQuery(name = "Pessoa.findByNome", query = "SELECT p FROM Pessoa p WHERE p.nome = :nome"),})
+@NamedQueries ({@NamedQuery(name = "PessoaConsultaNome", query = "SELECT p FROM Pessoa p WHERE p.nome like :titbusca"),
+    @NamedQuery(name = "PessoaCPF", query = "SELECT p FROM Pessoa p WHERE p.cpf = :busca")
+})
 
 public class Pessoa implements Serializable {
+
+   
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name="codigo", nullable = false)
@@ -50,6 +51,16 @@ public class Pessoa implements Serializable {
     private String nomepai;
     private String sexo;
     private String bairro;
+    private String tiposang;
+
+    public String getTiposang() {
+        return tiposang;
+    }
+
+    public void setTiposang(String tiposang) {
+        this.tiposang = tiposang;
+    }
+    
 
     @Override
     public int hashCode() {
@@ -136,6 +147,28 @@ public class Pessoa implements Serializable {
         return codigo;
     }
 
+    
+    public String toString() {
+        return  "Codigo:                        \n" + codigo + 
+                "\n\nNome:                        \n" + nome + 
+                "\n\nCPF:                         \n" + cpf + 
+                "\n\nRG:                          \n" + rg + 
+                "\n\nNome da Mãe:                 \n" + nomemae + 
+                "\n\nNome do Pai:                 \n" + nomepai + 
+                "\n\nSexo:                        \n" + sexo + 
+                "\n\nProfissão:                   \n" + profissao + 
+                "\n\nEstado Civil:                \n" + estcivil + 
+                "\n\nData de Nascimento:          \n" + datanasc + 
+                "\n\nData do Cadastro:            \n" + datacad + 
+                "\n\nNumero do Cartão SUS:        \n" + cartsus + 
+                "\n\nE-mail:                      \n" + email + 
+                "\n\nTelefone:                    \n" + telefone + 
+                "\n\nCidade:                      \n" + cidade + 
+                "\n\nEndereço:                    \n" + endereco + 
+                "\n\nUF:                          \n" + uf + 
+                "\n\nBairro:                      \n" + bairro ;
+    }
+
     public void setCodigo(int codigo) {
         this.codigo = codigo;
     }
@@ -219,5 +252,9 @@ public class Pessoa implements Serializable {
     public void setBairro(String bairro) {
         this.bairro = bairro;
     }
-    
+
+    public Pessoa() {
+    }
+
+   
 }

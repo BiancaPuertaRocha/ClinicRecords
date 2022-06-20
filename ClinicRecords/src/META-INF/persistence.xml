@@ -2,15 +2,19 @@
 <persistence version="2.1" xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
   <persistence-unit name="ClinicRecordsPU" transaction-type="RESOURCE_LOCAL">
     <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
-    <class>ManterMedicamento.Medicamento</class>
-    <class>ManterPaciente.Paciente</class>
-    <class>modelo.Pessoa</class>
-    <class>modelo.TipoAtendi</class>
-    <class>modelo.Setor</class>
-    <class>modelo.Medico</class>
-    <class>modelo.Funcionario</class>
+    <class>modelo.Consulta</class>
+    <class>modelo.Exame</class>
     <class>modelo.FichaAtendimento</class>
+    <class>modelo.Funcionario</class>
+    <class>modelo.ItemDeExame</class>
+    <class>modelo.ItemDeReceita</class>
+    <class>modelo.Medicamento</class>
+    <class>modelo.Medico</class>
+    <class>modelo.Pessoa</class>
     <class>modelo.PreConsulta</class>
+    <class>modelo.Setor</class>
+    <class>modelo.TipoAtendi</class>
+    <class>modelo.Prontuario</class>
     <properties>
       <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/clr?zeroDateTimeBehavior=convertToNull"/>
       <property name="javax.persistence.jdbc.user" value="root"/>

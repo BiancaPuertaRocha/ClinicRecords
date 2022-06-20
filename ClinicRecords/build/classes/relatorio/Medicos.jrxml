@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report name" pageWidth="1000" pageHeight="842" columnWidth="960" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="4df7dc71-77fc-4c1e-80b5-5c441f8a753e">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="datacad" class="java.util.Date">
+		<fieldDescription><![CDATA[datacad]]></fieldDescription>
+	</field>
+	<field name="crm" class="java.lang.String">
+		<fieldDescription><![CDATA[crm]]></fieldDescription>
+	</field>
+	<field name="cpf" class="java.lang.String">
+		<fieldDescription><![CDATA[cpf]]></fieldDescription>
+	</field>
+	<field name="maxatendi" class="java.lang.Integer">
+		<fieldDescription><![CDATA[maxatendi]]></fieldDescription>
+	</field>
+	<field name="nome" class="java.lang.String">
+		<fieldDescription><![CDATA[nome]]></fieldDescription>
+	</field>
+	<field name="especialidade" class="java.lang.String">
+		<fieldDescription><![CDATA[especialidade]]></fieldDescription>
+	</field>
+	<field name="telefone" class="java.lang.String">
+		<fieldDescription><![CDATA[telefone]]></fieldDescription>
+	</field>
+	<field name="nomeuser" class="java.lang.String">
+		<fieldDescription><![CDATA[nomeuser]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<rectangle>
+				<reportElement x="0" y="0" width="960" height="67" uuid="dbc9c19e-85e6-4a06-8c25-567860c75e7d"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="0" y="0" width="317" height="27" uuid="5542d662-f7a7-433e-aeb5-ed47fdfeda13"/>
+				<textElement>
+					<font fontName="Courier New" size="20" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Relatório de Medicos]]></text>
+			</staticText>
+			<image>
+				<reportElement x="822" y="-8" width="138" height="87" uuid="4a14213e-f119-4612-bbff-47f00ebf5ad7"/>
+				<imageExpression><![CDATA["C:\\Users\\Bianca\\Desktop\\CinicRecords\\ClinicRecords\\src\\Imagens\\logomenor - Cópia.jpg"]]></imageExpression>
+			</image>
+			<textField pattern="EEE, d MMM yyyy HH:mm:ss Z">
+				<reportElement x="0" y="27" width="218" height="20" uuid="fe250c4d-7036-43b5-9f4f-d4f67d0257c3"/>
+				<textElement>
+					<font fontName="Courier New" size="13" isItalic="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="32" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="265" height="20" uuid="069b7ae2-43c2-44c4-9747-68c93b219ae5"/>
+				<textElement>
+					<font fontName="Courier New" size="14"/>
+				</textElement>
+				<text><![CDATA[Relatório de Medicos]]></text>
+			</staticText>
+			<textField pattern="EEE, d MMM yyyy HH:mm:ss Z">
+				<reportElement x="715" y="0" width="204" height="20" uuid="f24fbc99-a79a-45fc-a661-2205ce4446ac"/>
+				<textElement>
+					<font fontName="Courier New" size="13" isItalic="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="0" y="20" width="960" height="1" uuid="fc55dba6-0812-4c16-ac20-89a9ebbde016"/>
+			</line>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="29" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="265" height="20" uuid="59a98123-175b-48ca-a4f2-67bba087b27b"/>
+				<textElement>
+					<font fontName="Courier New" size="15" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Nome]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="20" width="960" height="1" uuid="e8ecbf09-525d-4f82-a79f-46033dc38e4e"/>
+			</line>
+			<staticText>
+				<reportElement x="265" y="0" width="121" height="20" uuid="0a8058d8-6e1e-4be2-bc0f-69da65ca5121"/>
+				<textElement>
+					<font fontName="Courier New" size="15" isBold="true"/>
+				</textElement>
+				<text><![CDATA[CPF]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="386" y="0" width="128" height="20" uuid="390b7027-2f22-42c5-9ed2-c6b6268391be"/>
+				<textElement>
+					<font fontName="Courier New" size="15" isBold="true"/>
+				</textElement>
+				<text><![CDATA[CRM]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="514" y="1" width="137" height="20" uuid="e03d7fad-441b-49a3-a207-880836d7c3a0"/>
+				<textElement>
+					<font fontName="Courier New" size="15" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Especialidade]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="651" y="1" width="100" height="20" uuid="8ee31ce2-ca7f-46db-a819-68c4efffcc9b"/>
+				<textElement>
+					<font fontName="Courier New" size="15" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Atendimentos]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="760" y="0" width="100" height="20" uuid="e29db68a-02a8-4a71-b543-970ec0a00ddc"/>
+				<textElement>
+					<font fontName="Courier New" size="15" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Usuário]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="851" y="0" width="109" height="20" uuid="20db02df-41a3-4189-8c2a-8c9df1ce2d50"/>
+				<textElement>
+					<font fontName="Courier New" size="15" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Telefone]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="53" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="265" height="53" uuid="56794910-040f-4335-a646-188896c80dd3"/>
+				<textElement>
+					<font fontName="Courier New" size="13"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{nome}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="265" y="0" width="121" height="53" uuid="8ec460a5-027c-4f7e-92c7-568b2a9f57c8"/>
+				<textElement>
+					<font fontName="Courier New" size="13"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{cpf}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="386" y="0" width="128" height="53" uuid="0b466c4c-c65e-4919-83e0-1432ede531f9"/>
+				<textElement>
+					<font fontName="Courier New" size="13"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{crm}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="514" y="0" width="137" height="53" uuid="855103ea-3c9c-40fe-969b-9fb0a54f2327"/>
+				<textElement>
+					<font fontName="Courier New" size="13"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{especialidade}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="651" y="0" width="100" height="53" uuid="4c933292-5e74-48b7-88d6-2a700922d70a"/>
+				<textElement>
+					<font fontName="Courier New" size="13"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{maxatendi}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="751" y="0" width="100" height="53" uuid="bf95628b-2537-4424-ae70-e09e7d7db3c2"/>
+				<textElement>
+					<font fontName="Courier New" size="13"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{nomeuser}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="851" y="0" width="109" height="53" uuid="1cb38dd5-8f2a-4eeb-b634-1263b77f8065"/>
+				<textElement>
+					<font fontName="Courier New" size="13"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{telefone}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="33" splitType="Stretch">
+			<textField>
+				<reportElement x="848" y="13" width="112" height="20" uuid="31424a02-cb82-4905-8e91-3384a6fa0d44"/>
+				<textElement>
+					<font fontName="Courier New" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="0" y="0" width="960" height="1" uuid="8bfabe16-8800-43f1-82bf-166da999be44"/>
+			</line>
+		</band>
+	</pageFooter>
+</jasperReport>

@@ -6,8 +6,7 @@
 package Utilidades;
 
 import javax.persistence.EntityManager;
-import javax.persistence.EntityManagerFactory;
-import javax.persistence.Persistence;
+
 
 /**
  *
@@ -16,16 +15,15 @@ import javax.persistence.Persistence;
 public class Controle {
 
     protected EntityManager getEntityManger() {
-        EntityManagerFactory emf = Persistence.createEntityManagerFactory("ClinicRecordsPU");
-        return emf.createEntityManager();
+        
+        return GerenciamentoEntidades.getFabEntidades().createEntityManager();
     }
 
     public void adicionar(Object objeto) {
-//        EntityManager gerEntidade;
-//        gerEntidade = GerenciamentoEntidades.criarGerente();
         EntityManager em = getEntityManger();
         em.getTransaction().begin();
         em.persist(objeto);
+        
         em.getTransaction().commit();
         em.close();
     }

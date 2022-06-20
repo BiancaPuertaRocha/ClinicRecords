@@ -19,10 +19,14 @@ import javax.persistence.Table;
 @NamedQueries (
         {
             @NamedQuery(name="FuncionarioConsultaNome",query="SELECT f FROM Funcionario f WHERE f.nome LIKE :titbusca"),
-                 
+            @NamedQuery(name="FuncionarioConsultaSetor",query="SELECT f FROM Funcionario f WHERE f.setor = :setor and f.nome LIKE :nome "),
+            @NamedQuery(name="FuncionarioConsultaNomeUser",query="SELECT f FROM Funcionario f WHERE f.nomeuser = :titbusca"),
+            @NamedQuery(name="FuncionarioConsultaNomeSenha",query="SELECT f FROM Funcionario f WHERE f.nomeuser = :userbusca and f.senha = :senhabusca "),     
         })
 @DiscriminatorValue("FUNCIONARIO")
 public class Funcionario extends Pessoa  implements Serializable {
+
+   
     private String nomeuser;
     private String senha;
     @JoinColumn (name = "setor", referencedColumnName="codigo")
@@ -30,10 +34,7 @@ public class Funcionario extends Pessoa  implements Serializable {
     private Setor setor;
     private boolean tipo;
 
-    @Override
-    public String toString() {
-        return "Funcionario{" + "nome=" + super.getNome() + '}';
-    }
+    
 
 
     public String getNomeuser() {
@@ -70,6 +71,21 @@ public class Funcionario extends Pessoa  implements Serializable {
         this.tipo = tipo;
     }
 
+    public Funcionario() {
+    }
+
+
+    public Boolean getTipo() {
+        return tipo;
+    }
+
+    public void setTipo(Boolean tipo) {
+        this.tipo = tipo;
+    }
+
+    
+
+   
     
     
 }

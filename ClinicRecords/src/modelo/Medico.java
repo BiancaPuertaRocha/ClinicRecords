@@ -1,13 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package modelo;
-
-import modelo.Pessoa;
-
-
 import java.io.Serializable;
 import javax.persistence.DiscriminatorValue;
 
@@ -22,9 +13,14 @@ import javax.persistence.Table;
 @Table(name="medico")
 @NamedQueries (
         {
-            @NamedQuery(name="MedicoConsultaNome",query="SELECT m FROM Medico m WHERE m.nome LIKE :titbusca"),})
+            @NamedQuery(name="MedicoConsultaNome",query="SELECT m FROM Medico m WHERE m.nome LIKE :titbusca"),
+            @NamedQuery(name="MedicoConsultaNomeUser",query="SELECT m FROM Medico m WHERE m.nomeuser = :titbusca"),
+            @NamedQuery(name="MedicoConsultaNomeSenha",query="SELECT m FROM Medico m WHERE m.nomeuser = :userbusca and m.senha = :senhabusca"),
+        })
 @DiscriminatorValue("MEDICO") 
 public class Medico extends Pessoa implements Serializable{
+
+   
 
    
     private String nomeuser;
@@ -82,6 +78,18 @@ public class Medico extends Pessoa implements Serializable{
         this.especialidade = especialidade;
    
     }
+
+    public Medico() {
+    }
+
+   
+
+    public void setMaxatendi(Integer maxatendi) {
+        this.maxatendi = maxatendi;
+    }
+
+    
+    
     
     
     

@@ -5,10 +5,9 @@
  */
 package modelo;
 
-import java.beans.PropertyChangeListener;
-
 import java.io.Serializable;
-import java.util.Date;
+import javax.persistence.Basic;
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -16,8 +15,6 @@ import javax.persistence.Id;
 import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
 import javax.persistence.Table;
-import javax.persistence.Temporal;
-import javax.persistence.TemporalType;
 
 @Entity
 @Table(name="setor")
@@ -30,12 +27,17 @@ import javax.persistence.TemporalType;
         })
 public class Setor implements Serializable{
 
-   
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Basic(optional = false)
+    @Column(name = "codigo")
     private int codigo;
+    @Column(name = "descricao")
     private String descricao;
+    @Column(name = "observacao")
     private String observacao;
+   
+   
 
     @Override
     public String toString() {
@@ -91,7 +93,16 @@ public class Setor implements Serializable{
         }
         return true;
     }
+
+    public Setor() {
+    }
+
+    public Setor(Integer codigo) {
+        this.codigo = codigo;
+    }
+
     
+
     
 
     

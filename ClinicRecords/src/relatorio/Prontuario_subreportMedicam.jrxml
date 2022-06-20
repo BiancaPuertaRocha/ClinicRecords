@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Prontuario_subreportMedicam" language="groovy" pageWidth="555" pageHeight="802" columnWidth="555" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="aebff2ce-05f9-4efe-ab70-4da17dffe963">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString language="Java">
+		<![CDATA[]]>
+	</queryString>
+	<field name="concentracao" class="java.lang.Double">
+		<fieldDescription><![CDATA[medicamento.concentracao]]></fieldDescription>
+	</field>
+	<field name="descricao" class="java.lang.String">
+		<fieldDescription><![CDATA[medicamento.descricao]]></fieldDescription>
+	</field>
+	<field name="unidade" class="java.lang.String">
+		<fieldDescription><![CDATA[medicamento.unidade]]></fieldDescription>
+	</field>
+	<field name="periodicidade" class="java.lang.String">
+		<fieldDescription><![CDATA[periodicidade]]></fieldDescription>
+	</field>
+	<field name="dosagem" class="java.lang.String">
+		<fieldDescription><![CDATA[dosagem]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<columnHeader>
+		<band height="24" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="2" width="98" height="19" uuid="efcda874-7044-4189-9a3c-4514787b61cb"/>
+				<textElement>
+					<font fontName="Courier New" size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Descrição]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="220" y="0" width="213" height="19" uuid="9145f26f-c6f1-457a-bf51-7b377405083b"/>
+				<textElement>
+					<font fontName="Courier New" size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Prescrição]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="30" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="220" height="30" uuid="5f31ab49-cf09-4a02-8591-dacf25cdac5e"/>
+				<textElement>
+					<font fontName="Courier New" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{descricao}+" - "+$F{concentracao}+" "+$F{unidade}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="220" y="6" width="335" height="24" uuid="73ddee2b-9640-4fda-a18c-86861e4344b8"/>
+				<textElement>
+					<font fontName="Courier New" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{periodicidade}+" - "+$F{dosagem}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>
